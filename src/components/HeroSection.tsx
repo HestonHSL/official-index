@@ -1,9 +1,50 @@
-import yayJpg from '../assets/yay.jpg';
 import { Icon } from 'umi';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+
+// 导入轮播图图片
+import hero1 from '../assets/HeroSection/hero-1.jpg';
+import hero2 from '../assets/HeroSection/hero-2.jpg';
+import hero3 from '../assets/HeroSection/hero-3.jpg';
 
 export default function HeroSection() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+    // 轮播图数据
+    const slides = [hero1, hero2, hero3];
+
+    // 轮播图自动播放
+    useEffect(() => {
+        if (!isAutoPlaying) return;
+
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [isAutoPlaying, slides.length]);
+
+    // 手动切换轮播图
+    const goToSlide = (index: number) => {
+        setCurrentSlide(index);
+        setIsAutoPlaying(false);
+        // 3秒后恢复自动播放
+        setTimeout(() => setIsAutoPlaying(true), 3000);
+    };
+
+    // 上一张/下一张
+    const goToPrevious = () => {
+        setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), 3000);
+    };
+
+    const goToNext = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+        setIsAutoPlaying(false);
+        setTimeout(() => setIsAutoPlaying(true), 3000);
+    };
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -193,6 +234,16 @@ export default function HeroSection() {
                                     <span className="text-gray-500 text-xs ml-2">• Customer satisfaction</span>
                                 </div>
                             </div>
+
+                            <div className="flex items-center">
+                                <div className="w-6 h-6 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mr-3 shadow-lg">
+                                    <Icon icon="mdi:truck-delivery" className="text-white text-xs" />
+                                </div>
+                                <div>
+                                    <span className="text-gray-900 font-semibold text-sm">DDP Shipping</span>
+                                    <span className="text-gray-500 text-xs ml-2">• All-inclusive customs clearance</span>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="space-y-4">
@@ -230,16 +281,57 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    {/* Right image */}
                     <div className="relative">
                         <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-2xl">
-                            <div className="relative">
-                                <img
-                                    src={yayJpg}
-                                    alt="3D printing samples"
-                                    className="w-full h-80 object-cover rounded-xl shadow-2xl"
-                                />
-                                <div className="absolute top-3 right-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-2 py-1 rounded-full shadow-lg">
+                            <div className="relative overflow-hidden rounded-xl">
+                                {/* 轮播图容器 */}
+                                <div className="relative h-80">
+                                    {slides.map((slide, index) => (
+                                        <div
+                                            key={slide}
+                                            className={`absolute inset-0 transition-all duration-700 ease-in-out ${index === currentSlide
+                                                ? 'opacity-100 translate-x-0'
+                                                : 'opacity-0 translate-x-full'
+                                                }`}
+                                        >
+                                            <img
+                                                src={slide}
+                                                alt={`Hero image ${index + 1}`}
+                                                className="w-full h-full object-cover"
+                                            />
+                                        </div>
+                                    ))}
+                                </div>
+
+                                {/* 轮播图控制按钮 */}
+                                <button
+                                    onClick={goToPrevious}
+                                    className="absolute left-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/50 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white/80 transition-all duration-300 z-10"
+                                >
+                                    <Icon icon="mdi:chevron-left" className="text-gray-700" />
+                                </button>
+                                <button
+                                    onClick={goToNext}
+                                    className="absolute right-2 top-1/2 transform -translate-y-1/2 w-10 h-10 bg-white/50 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white/80 transition-all duration-300 z-10"
+                                >
+                                    <Icon icon="mdi:chevron-right" className="text-gray-700" />
+                                </button>
+
+                                {/* 轮播图指示器 */}
+                                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                                    {slides.map((slide, index) => (
+                                        <button
+                                            key={slide}
+                                            onClick={() => goToSlide(index)}
+                                            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentSlide
+                                                ? 'bg-white scale-125'
+                                                : 'bg-white/50 hover:bg-white/75'
+                                                }`}
+                                        />
+                                    ))}
+                                </div>
+
+                                <div className="absolute top-3 right-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white px-2 py-1 rounded-full shadow-lg z-10">
                                     <span className="text-xs font-medium">🔥 Hot Sale</span>
                                 </div>
                             </div>

@@ -4,7 +4,9 @@ import HeroSection from '../components/HeroSection';
 import CapabilitiesSection from '../components/CapabilitiesSection';
 import IndustriesSection from '../components/IndustriesSection';
 import ProcessSection from '../components/ProcessSection';
+import FactoryIntroduceSection from '../components/FactoryIntroduceSection';
 import CTASection from '../components/CTASection';
+import Footer from '../components/Footer';
 
 export default function HomePage() {
   return (
@@ -15,7 +17,9 @@ export default function HomePage() {
       <CapabilitiesSection />
       <IndustriesSection />
       <ProcessSection />
+      <FactoryIntroduceSection />
       <CTASection />
+      <Footer />
     </div>
   );
 }

@@ -19,38 +19,6 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    {/* Navigation links */}
-                    <div className="hidden lg:flex items-center space-x-8">
-                        <a href="#" className="group relative text-gray-700 hover:text-blue-600 transition-colors">
-                            <span className="flex items-center">
-                                <span className="mr-2 group-hover:scale-110 transition-transform">⚡</span>
-                                Capabilities
-                            </span>
-                            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></div>
-                        </a>
-                        <a href="#" className="group relative text-gray-700 hover:text-blue-600 transition-colors">
-                            <span className="flex items-center">
-                                <span className="mr-2 group-hover:scale-110 transition-transform">🏭</span>
-                                Industries
-                            </span>
-                            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></div>
-                        </a>
-                        <a href="#" className="group relative text-gray-700 hover:text-blue-600 transition-colors">
-                            <span className="flex items-center">
-                                <span className="mr-2 group-hover:scale-110 transition-transform">📚</span>
-                                Resources
-                            </span>
-                            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></div>
-                        </a>
-                        <a href="#" className="group relative text-gray-700 hover:text-blue-600 transition-colors">
-                            <span className="flex items-center">
-                                <span className="mr-2 group-hover:scale-110 transition-transform">🏢</span>
-                                Company
-                            </span>
-                            <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 group-hover:w-full transition-all duration-300"></div>
-                        </a>
-                    </div>
-
                     {/* Right side functions */}
                     <div className="flex items-center space-x-4">
                         <button className="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition-all duration-300 flex items-center shadow-lg hover:shadow-xl">

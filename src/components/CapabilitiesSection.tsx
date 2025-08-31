@@ -1,9 +1,14 @@
 import { Icon } from 'umi';
+import slaImage from '../assets/CapabilitiesSection/1-SLA-Stereolithography.jpg';
+import slsImage from '../assets/CapabilitiesSection/2-SLS-SelectiveLaserSintering.jpg';
+import mjfImage from '../assets/CapabilitiesSection/3-MJF-MultiJetFusion.jpg';
+import slmImage from '../assets/CapabilitiesSection/4-SLM-SelectiveLaserMelting.png';
+import fdmImage from '../assets/CapabilitiesSection/5-FDM-FusedDepositionModeling.jpg';
 
 export default function CapabilitiesSection() {
     return (
         <section className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-2">
                 <div className="text-center mb-16">
                     <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full border border-blue-200 mb-6">
                         <span className="text-blue-700 text-sm font-medium">🔧 Professional Manufacturing Capabilities</span>
@@ -16,120 +21,185 @@ export default function CapabilitiesSection() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* FDM 3D Printing */}
-                    <div className="group relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
-                            <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Icon icon="mdi:printer-3d" className="text-white text-2xl" />
+                <div className="flex flex-col space-y-8">
+                    {/* 第一行：3张卡片 */}
+                    <div className="flex justify-around">
+                        {/* SLA Stereolithography */}
+                        <div className="w-[31%]">
+                            <div className="group relative h-full">
+                                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                                <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-purple-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl h-full flex flex-col">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <Icon icon="mdi:laser-pointer" className="text-white text-2xl" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">SLA</h3>
+                                    <h4 className="text-lg font-semibold text-purple-600 mb-4">Stereolithography</h4>
+                                    <ul className="space-y-3 text-sm text-gray-600 mb-6 flex-grow">
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Visual part prototyping. High resolution. Low cost.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Dimensional accuracy of ±0.2% with a lower limit of ±0.2mm.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Lead times from 3 business days</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-purple-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Standard Resin, High-Detail Resin, Translucent Resin, Transparent Resin, etc.</span>
+                                        </li>
+                                    </ul>
+                                    <div className="relative overflow-hidden rounded-xl mt-auto">
+                                        <img src={slaImage} alt="SLA Stereolithography" className="w-full h-48 object-cover" />
+                                    </div>
+                                </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">FDM 3D Printing</h3>
-                            <ul className="space-y-3 text-sm text-gray-600">
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                                    PLA, ABS, PETG, TPU materials
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                                    Tolerance ±0.2mm
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                                    Max size 400×400×400mm
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                                    Lead time 1-3 days
-                                </li>
-                            </ul>
+                        </div>
+
+                        {/* SLS Selective Laser Sintering */}
+                        <div className="w-[31%]">
+                            <div className="group relative h-full">
+                                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                                <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-orange-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl h-full flex flex-col">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <Icon icon="mdi:fire" className="text-white text-2xl" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">SLS</h3>
+                                    <h4 className="text-lg font-semibold text-orange-600 mb-4">Selective Laser Sintering</h4>
+                                    <ul className="space-y-3 text-sm text-gray-600 mb-6 flex-grow">
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Functional prototyping. Low-run production.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Dimensional accuracy of +0.3% with a lower limit of +0.3mm.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Lead times from 3 business days</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Nylon PA11, Nylon PA12, Nylon PA12 Glass Fill, etc.</span>
+                                        </li>
+                                    </ul>
+                                    <div className="relative overflow-hidden rounded-xl mt-auto">
+                                        <img src={slsImage} alt="SLS Selective Laser Sintering" className="w-full h-48 object-cover" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* MJF Multi Jet Fusion */}
+                        <div className="w-[31%]">
+                            <div className="group relative h-full">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                                <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-blue-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl h-full flex flex-col">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <Icon icon="mdi:printer-3d" className="text-white text-2xl" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">MJF</h3>
+                                    <h4 className="text-lg font-semibold text-blue-600 mb-4">Multi Jet Fusion</h4>
+                                    <ul className="space-y-3 text-sm text-gray-600 mb-6 flex-grow">
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Functional prototyping. Low-run production.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Dimensional accuracy of +0.3% with a lower limit of +0.3mm.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Lead times from 3 business days</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>HP Nylon PA12</span>
+                                        </li>
+                                    </ul>
+                                    <div className="relative overflow-hidden rounded-xl mt-auto">
+                                        <img src={mjfImage} alt="MJF Multi Jet Fusion" className="w-full h-48 object-cover" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    {/* SLA Stereolithography */}
-                    <div className="group relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-purple-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
-                            <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Icon icon="mdi:laser-pointer" className="text-white text-2xl" />
+                    {/* 第二行：2张卡片 */}
+                    <div className="flex justify-around">
+                        {/* SLM Selective Laser Melting */}
+                        <div className="w-[31%]">
+                            <div className="group relative h-full">
+                                <div className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-slate-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                                <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl h-full flex flex-col">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <Icon icon="mdi:gear" className="text-white text-2xl" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">SLM</h3>
+                                    <h4 className="text-lg font-semibold text-gray-600 mb-4">Selective Laser Melting</h4>
+                                    <ul className="space-y-3 text-sm text-gray-600 mb-6 flex-grow">
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Metal parts rapid prototyping. Production grade.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Dimensional accuracy of +0.2% with a lower limit of +0.2mm.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Lead times from 5 business days</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-gray-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Aluminum, Stainless Steel, Titanium, Tool Steel, Inconel, etc.</span>
+                                        </li>
+                                    </ul>
+                                    <div className="relative overflow-hidden rounded-xl mt-auto">
+                                        <img src={slmImage} alt="SLM Selective Laser Melting" className="w-full h-48 object-cover" />
+                                    </div>
+                                </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">SLA Stereolithography</h3>
-                            <ul className="space-y-3 text-sm text-gray-600">
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                                    High-precision resin materials
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                                    Tolerance ±0.1mm
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                                    Surface finish Ra0.8
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                                    Lead time 2-5 days
-                                </li>
-                            </ul>
                         </div>
-                    </div>
 
-                    {/* SLS Selective Laser Sintering */}
-                    <div className="group relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-orange-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
-                            <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Icon icon="mdi:fire" className="text-white text-2xl" />
+                        {/* FDM Fused Deposition Modeling */}
+                        <div className="w-[31%]">
+                            <div className="group relative h-full">
+                                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                                <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-green-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl h-full flex flex-col">
+                                    <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                                        <Icon icon="mdi:printer-3d" className="text-white text-2xl" />
+                                    </div>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">FDM</h3>
+                                    <h4 className="text-lg font-semibold text-green-600 mb-4">Fused Deposition Modeling</h4>
+                                    <ul className="space-y-3 text-sm text-gray-600 mb-6 flex-grow">
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Plastic parts rapid prototyping. Low cost.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Dimensional accuracy of +0.2% with a lower limit of +0.2mm.</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>Lead times from 3 business days</span>
+                                        </li>
+                                        <li className="flex items-start">
+                                            <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                                            <span>ABS, PETG, PLA, etc.</span>
+                                        </li>
+                                    </ul>
+                                    <div className="relative overflow-hidden rounded-xl mt-auto">
+                                        <img src={fdmImage} alt="FDM Fused Deposition Modeling" className="w-full h-48 object-cover" />
+                                    </div>
+                                </div>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">SLS Laser Sintering</h3>
-                            <ul className="space-y-3 text-sm text-gray-600">
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
-                                    PA12, PA6, TPU materials
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
-                                    Tolerance ±0.3mm
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
-                                    No support structures needed
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-orange-400 rounded-full mr-3"></span>
-                                    Lead time 3-7 days
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* Metal 3D Printing */}
-                    <div className="group relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-gray-500/10 to-slate-500/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                        <div className="relative bg-white rounded-3xl p-8 border border-gray-100 hover:border-gray-200 transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-xl">
-                            <div className="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                                <Icon icon="mdi:gear" className="text-white text-2xl" />
-                            </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4">Metal 3D Printing</h3>
-                            <ul className="space-y-3 text-sm text-gray-600">
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                                    Titanium, Stainless Steel, Aluminum
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                                    Tolerance ±0.1mm
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                                    Density &gt;99.5%
-                                </li>
-                                <li className="flex items-center">
-                                    <span className="w-2 h-2 bg-gray-400 rounded-full mr-3"></span>
-                                    Lead time 5-10 days
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
