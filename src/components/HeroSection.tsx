@@ -169,10 +169,10 @@ export default function HeroSection() {
                 </div>
             </div>
 
-            <div className="relative max-w-7xl mx-auto px-4" style={{ zIndex: 2 }}>
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4" style={{ zIndex: 2 }}>
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Left content */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 lg:pr-8">
                         <div className="space-y-4">
                             <div className="inline-flex items-center px-3 py-1.5 bg-blue-100/80 backdrop-blur-sm rounded-full border border-blue-200/50">
                                 <span className="text-blue-700 text-xs font-medium">🚀 Industry-leading 3D printing services</span>
@@ -247,10 +247,6 @@ export default function HeroSection() {
                         </div>
 
                         <div className="space-y-4">
-                            <p className="text-gray-600 leading-relaxed text-sm">
-                                From concept design to mass production, we provide comprehensive 3D printing solutions. Including FDM, SLA, SLS, metal printing and other technologies,
-                                supporting engineering plastics, resins, metal powders and other materials.
-                            </p>
 
                             <div className="flex flex-col sm:flex-row gap-3">
                                 <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center text-base font-medium shadow-lg hover:shadow-xl border border-blue-500/30">
@@ -281,8 +277,8 @@ export default function HeroSection() {
                         </div>
                     </div>
 
-                    <div className="relative">
-                        <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-2xl">
+                    <div className="relative lg:-mr-4 xl:-mr-8">
+                        <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/50 shadow-2xl transform scale-110 lg:scale-125 translate-x-4 lg:translate-x-10">
                             <div className="relative overflow-hidden rounded-xl">
                                 {/* 轮播图容器 */}
                                 <div className="relative h-80">
