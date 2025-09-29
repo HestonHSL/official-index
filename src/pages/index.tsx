@@ -1,7 +1,9 @@
 import TopBar from '../components/TopBar';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
-import CapabilitiesSection from '../components/CapabilitiesSection';
+import Printing3DSection from '../components/Printing3DSection';
+import CNCMachiningSection from '../components/CNCMachiningSection';
+import SheetMetalSection from '../components/SheetMetalSection';
 import IndustriesSection from '../components/IndustriesSection';
 import ProcessSection from '../components/ProcessSection';
 import FactoryIntroduceSection from '../components/FactoryIntroduceSection';
@@ -14,7 +16,9 @@ export default function HomePage() {
       <TopBar />
       <Navbar />
       <HeroSection />
-      <CapabilitiesSection />
+      <Printing3DSection />
+      <SheetMetalSection />
+      <CNCMachiningSection />
       <IndustriesSection />
       <ProcessSection />
       <FactoryIntroduceSection />

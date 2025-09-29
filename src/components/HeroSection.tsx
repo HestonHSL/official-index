@@ -206,16 +206,6 @@ export default function HeroSection() {
                             </div>
 
                             <div className="flex items-center">
-                                <div className="w-6 h-6 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mr-3 shadow-lg">
-                                    <Icon icon="mdi:lightning-bolt" className="text-white text-xs" />
-                                </div>
-                                <div>
-                                    <span className="text-gray-900 font-semibold text-sm">24h Delivery</span>
-                                    <span className="text-gray-500 text-xs ml-2">• Fastest 24-hour completion</span>
-                                </div>
-                            </div>
-
-                            <div className="flex items-center">
                                 <div className="w-6 h-6 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mr-3 shadow-lg">
                                     <Icon icon="mdi:flask" className="text-white text-xs" />
                                 </div>
@@ -334,8 +324,8 @@ export default function HeroSection() {
 
                             <div className="mt-6 grid grid-cols-2 gap-4">
                                 <div className="text-center p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/50">
-                                    <div className="text-2xl font-bold text-blue-600">24h</div>
-                                    <div className="text-gray-600 text-xs">Fastest delivery</div>
+                                    <div className="text-2xl font-bold text-blue-600">DDP</div>
+                                    <div className="text-gray-600 text-xs">DDP shipping</div>
                                 </div>
                                 <div className="text-center p-3 rounded-xl bg-white/60 backdrop-blur-sm border border-white/50">
                                     <div className="text-2xl font-bold text-emerald-600">99.9%</div>
